@@ -47,7 +47,7 @@ const Login = () => {
             </div></a>
 					<p class="join-link">
 						New to linkedin?
-						<a href="/" class="join-now">
+						<a href="/register" class="join-now">
 							Join now
 						</a>
 					</p>
