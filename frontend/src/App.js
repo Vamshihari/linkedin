@@ -4,20 +4,17 @@ import './App.css';
 import Login from './components/Login.js';
 import Register from './components/register.js';
 function App() {
-  const PageRender=(Page)=>{
-    return <Page/>
-  }
+  
   return (
-    <>
-   
     <Router>
       <Switch>
-        <Route exact path="/register" render={()=>PageRender(Register)}/>
-        <Route exact path="/login" render={()=>PageRender(Login)}/>
-       
+        <Route exact path="/" render={()=><Register/>}
+        />
+        <Route exact path="/login" render={()=><Login/>}
+        />
       </Switch>
     </Router>
-    </>
+  
   );
 }
 

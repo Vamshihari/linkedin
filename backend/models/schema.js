@@ -5,7 +5,7 @@ type: String,
 required: true
 },
 Password: {
-type: String,
+type: Number,
 required: true
 }
 
