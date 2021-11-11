@@ -3,7 +3,76 @@ import "../App.css";
 import Control from "../controller/control";
 
 const Register = () => {
+   const validateEmail =(email)=>
+{
+  let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+  if (email.match   (regexEmail)) {
+    return true; 
+  } else {
+    return false; 
+  }
+}
+  const isUpper = (pswd) => {
+    let format=/[A-Z]/
+    if(format.test(pswd)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+const isLower = (pswd) => {
+    let format=/[a-z]/
+    if(format.test(pswd)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+const specialTest=(pswd)=>{
+let format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+if(format.test(pswd)){
+  return true;
+} else {
+  return false;
+}
+}
+const isNumber=(pswd)=>{
+    let hasNumber = /\d/;
+    if(hasNumber.test(pswd))  {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+const validate=(password)=>{
+    // let pswd=this.state.password
+    let length=password.length;
+    
+    if(length>=8 && isUpper(password) && isLower(password) && specialTest(password) && isNumber(password))
+    {
+        // console.log("Strong password")
+        setValidateMsg("strong password")
+        return true
+    }
+    else{
+        // console.log("Please enter a valid password")
+       setValidateMsg("Please enter a valid password")
+       return false
+    }
+    setValidateMsg("")
+    }
+
+
+
+
+
    	const submitDetails = () => {
+         if(validateEmail(email) && validate(password)){
 		const body = { email, password };
 		console.log(body);
 		let url = "http://localhost:1109/register";
@@ -25,9 +94,11 @@ const Register = () => {
 			success,
 			failure
 		);
+      }
 	};
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
+   const [validatemsg, setValidateMsg] = useState("")
 	
 
     return (
@@ -49,6 +120,7 @@ const Register = () => {
             </div>
             <div className="form-group">
                <label for="password-input">Password (6 or more characters)</label>
+               <p>{validatemsg}</p>
                <input type="password" id="password-input" onChange={(event)=>setPassword(event.target.value)} required/>
             </div>
             <div className="helper-text">
@@ -63,7 +135,7 @@ const Register = () => {
                </small>
             </div>
             <div className="form-group">
-               <input  value="Agree and Join" className="btn" onClick={()=>submitDetails()} />
+               <input type="submit" value="Agree and Join" className="btn" onClick={()=>submitDetails()} />
             </div>
             <p className="sign-in-text">
                Already on LinkedIn? <a href=".">Sign In</a>
