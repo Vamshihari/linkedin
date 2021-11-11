@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { set } from "react-hook-form";
 import "../App.css";
 import Control from "../controller/control";
 
@@ -6,9 +7,10 @@ const Register = () => {
    const validateEmail =(email)=>
 {
   let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
-  if (email.match   (regexEmail)) {
+  if (email.match(regexEmail)) {
     return true; 
   } else {
+     setValidateMsg("enter the valid mailid")
     return false; 
   }
 }
