@@ -3,13 +3,11 @@ import "../App.css";
 import Control from "../controller/control";
 
 const Register = () => {
-	const [email, setEmail] = useState("")
-	const [password, setPassword] = useState("")
-	
-	const submitDetails = () => {
+   	const submitDetails = () => {
 		const body = { email, password };
 		console.log(body);
-		let url = "http://localhost:1109/user";
+		let url = "http://localhost:1109/register";
+      console.log("working");
 
 		const success = (res) => {
 			console.log("Success", res);
@@ -28,31 +26,35 @@ const Register = () => {
 			failure
 		);
 	};
+	const [email, setEmail] = useState("")
+	const [password, setPassword] = useState("")
+	
+
     return (
         <>
-        <div class="set">
+        <div className="set">
 
       <div id="main-header">
-         <div class="header-title">
-            <h1><center>Linked <span class="text-primary">in</span></center></h1>
+         <div className="header-title">
+            <h1><center>Linked <span className="text-primary">in</span></center></h1>
          </div>
-         <div class="header-text">Make The Most Of Your Professional Life</div>
+         <div className="header-text">Make The Most Of Your Professional Life</div>
       </div>
 
-      <section class="main-section">
-         <form class="my-form">
-            <div class="form-group">
+      <section className="main-section">
+         <form className="my-form">
+            <div className="form-group">
                <label for="email-input">Email</label>
                <input type="email" id="email-input" onChange={(event)=>setEmail(event.target.value)} required/>
             </div>
-            <div class="form-group">
-               <label for="email-input">Password (6 or more characters)</label>
+            <div className="form-group">
+               <label for="password-input">Password (6 or more characters)</label>
                <input type="password" id="password-input" onChange={(event)=>setPassword(event.target.value)} required/>
             </div>
-            <div class="helper-text">
+            <div className="helper-text">
                <small>
                   By Clicking Agree and Join, You Agree to the LinkedIn
-                  <span class="text-primary">
+                  <span className="text-primary">
                      <a href="/">User Agreement,</a>
                      <a href="/">Privacy,Policy,</a>
                      and
@@ -60,11 +62,11 @@ const Register = () => {
                   </span>
                </small>
             </div>
-            <div class="form-group">
-               <input type="submit" value="Agree and Join" class="submit-btn" onClick={()=>submitDetails()} />
+            <div className="form-group">
+               <input  value="Agree and Join" className="btn" onClick={()=>submitDetails()} />
             </div>
-            <p class="sign-in-text">
-               Already on LinkedIn? <a href="/">Sign In</a>
+            <p className="sign-in-text">
+               Already on LinkedIn? <a href=".">Sign In</a>
             </p>
          </form>
       </section>

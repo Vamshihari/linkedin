@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const projectSchema = new mongoose.Schema({
-Email: {
+email: {
 type: String,
 required: true
 },
-Password: {
+password: {
 type: Number,
 required: true
 }

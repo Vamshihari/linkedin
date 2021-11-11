@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" render={()=><Register/>}
+        <Route exact path="/register" render={()=><Register/>}
         />
-        <Route exact path="/login" render={()=><Login/>}
+        <Route exact path="/" render={()=><Login/>}
         />
       </Switch>
     </Router>
