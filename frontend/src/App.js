@@ -2,8 +2,8 @@
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
 import Login from './components/Login.js';
-import Register from './components/Register.js';
-import Landing from './components/Landing.js';
+import Register from './components/register.js';
+import Landing from './components/landing.js';
 
 
 

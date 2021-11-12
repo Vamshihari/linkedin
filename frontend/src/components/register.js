@@ -171,7 +171,7 @@ const Register = () => {
                   </div>
                   <div class="form-group">
                     
-                      <button  type="submit" value="Next" class="submit-btn" onClick={() =>setregistrationPageNumber(false)}/>
+                      <input  type="submit" value="Next" class="submit-btn" onClick={() =>setregistrationPageNumber(false)}/>
                   
                   </div>
                   <p className="sign-in-text">
@@ -250,7 +250,7 @@ const Register = () => {
                     </small>
                   </div>
                   <div className="form-group">
-                    <button
+                    <input
                       type="submit"
                       value="Agree and Join"
                       className="btn"
