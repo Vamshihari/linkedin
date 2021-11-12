@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { set } from "react-hook-form";
+// import { set } from "react-hook-form";
 import "../App.css";
 import Control from "../controller/control";
 
@@ -66,7 +66,7 @@ const validate=(password)=>{
        setValidateMsg("Please enter a valid password")
        return false
     }
-    setValidateMsg("")
+   //  setValidateMsg("")
     }
 
 
