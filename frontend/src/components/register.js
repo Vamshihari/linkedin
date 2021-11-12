@@ -86,7 +86,7 @@ const Register = () => {
      const body = { email, password, name, surname, occupation, phonenumber };
      console.log(body);
      let url = "http://localhost:1109/register";
-     console.log("working");
+   //   console.log("working");
 
      const success = (res) => {
        console.log("Success", res);
@@ -102,14 +102,14 @@ const Register = () => {
  /**
   * Handler for managing registrationPageNumber
   */
- const registrationPageNumberHandler = () => {
+//  const registrationPageNumberHandler = () => {
 
-   // validate all the data and show errors, we
-   // ???
+//    // validate all the data and show errors, we
+//    // ???
     
-   // if no errors are there then only set the registration to page 2 
-    setregistrationPageNumber();
- };
+//    // if no errors are there then only set the registration to page 2 
+//     setregistrationPageNumber();
+//  };
 
   // to maintain the state of page number of registration user is looking at
   const [registrationPageNumber, setregistrationPageNumber] = useState(true);
@@ -163,16 +163,16 @@ const Register = () => {
                     <small>
                       By Clicking Agree and Join, You Agree to the LinkedIn
                       <span className="text-primary">
-                        <a href="/">
+                        <a href=".">
                           User Agreement,Privacy,Policy,and Cookie Policy.
                         </a>
                       </span>
                     </small>
                   </div>
                   <div class="form-group">
-                    <a href="/registersecondpage">
+                    
                       <button  type="submit" value="Next" class="submit-btn" onClick={() =>setregistrationPageNumber(false)}/>
-                    </a>
+                  
                   </div>
                   <p className="sign-in-text">
                     Already on LinkedIn? <a href=".">Sign In</a>
@@ -199,41 +199,40 @@ const Register = () => {
               <section className="main-section">
                 <form className="my-form">
                   <div className="form-group">
-                    <label for="email-input">Name</label>
+                    <label for="name-input">Name</label>
                     <input
-                      type="email"
-                      id="email-input"
+                      type="name"
+                      id="name-input"
                       value={name}
                       onChange={(event) => setName(event.target.value)}
                       required
                     />
                   </div>
                   <div className="form-group">
-                    <label for="password-input">Surname</label>
-                    <p>{validatemsg}</p>
+                    <label for="surname-input">Surname</label>
                     <input
-                      type="password"
-                      id="password-input"
-                      value={password}
+                      type="surname"
+                      id="surname-input"
+                      value={surname}
                       onChange={(event) => setSurname(event.target.value)}
                       required
                     />
                   </div>
                   <div className="form-group">
-                    <label for="email-input">Occupation</label>
+                    <label for="occupation-input">Occupation</label>
                     <input
-                      type="email"
-                      id="email-input"
+                      type="occupation"
+                      id="occupation-input"
                       value={occupation}
                       onChange={(event) => setOccupation(event.target.value)}
                       required
                     />
                   </div>
                   <div className="form-group">
-                    <label for="email-input">phone number</label>
+                    <label for="phone number-input">phone number</label>
                     <input
-                      type="email"
-                      id="email-input"
+                      type="phone number"
+                      id="phone number-input"
                       value={phonenumber}
                       onChange={(event) => setPhonenumber(event.target.value)}
                       required
@@ -243,10 +242,10 @@ const Register = () => {
                     <small>
                       By Clicking Agree and Join, You Agree to the LinkedIn
                       <span className="text-primary">
-                        <a href="/">User Agreement,</a>
-                        <a href="/">Privacy,Policy,</a>
+                        <a href=".">User Agreement,</a>
+                        <a href=".">Privacy,Policy,</a>
                         and
-                        <a href="/">Cookie Policy.</a>
+                        <a href=".">Cookie Policy.</a>
                       </span>
                     </small>
                   </div>
@@ -256,9 +255,9 @@ const Register = () => {
                       value="Agree and Join"
                       className="btn"
                       onClick={()=>submitDetails()}
-                    />
-                     <button onClick={()=>setregistrationPageNumber(false)}>Back</button>
-                  </div>
+                    /></div>
+                    {/* </div> <button onClick={()=>submitDe>Back</button>
+                  </div> */}
                   <p className="sign-in-text">
                     Already on LinkedIn? <a href=".">Sign In</a>
                   </p>
