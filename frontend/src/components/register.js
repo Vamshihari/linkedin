@@ -1,10 +1,18 @@
+/**
+ * Importing REACT 
+ * Import Control from controller folder
+ * @author: HARI VAMSHI
+ * @author: SURYA KANT
+ *
+ */
 import React, { useState } from "react";
 //import { set } from "react-hook-form";
 import "../App.css";
 import Control from "../controller/control";
 
-const Register = () => {
-  
+const Register = () => {  //Created a function Register(main function)
+
+  //creating states for all components 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -14,7 +22,8 @@ const Register = () => {
 
   const [validatemsg, setValidateMsg] = useState("");
 
-  const validateEmail = (email) => {
+
+  const validateEmail = (email) => {  //created a function to validate email
    // eslint-disable-next-line no-useless-escape
    let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
    if (email.match(regexEmail)) {
@@ -24,7 +33,7 @@ const Register = () => {
      return false;
    }
  };
- const isUpper = (pswd) => {
+ const isUpper = (pswd) => {  //created a function to validate password
    let format = /[A-Z]/;
    if (format.test(pswd)) {
      return true;
@@ -32,7 +41,7 @@ const Register = () => {
      return false;
    }
  };
- const isLower = (pswd) => {
+ const isLower = (pswd) => {  //created a function to validate password
    let format = /[a-z]/;
    if (format.test(pswd)) {
      return true;
@@ -40,7 +49,7 @@ const Register = () => {
      return false;
    }
  };
- const specialTest = (pswd) => {
+ const specialTest = (pswd) => {  
    // eslint-disable-next-line no-useless-escape
    let format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
    if (format.test(pswd)) {
@@ -104,10 +113,17 @@ const Register = () => {
   */
 //  const registrationPageNumberHandler = () => {
 
-//    // validate all the data and show errors, we
-//    // ???
-    
-//    // if no errors are there then only set the registration to page 2 
+  // const validatePhoneNumber = (phonenumber) => {
+  //   const isNumber = (phonenumber) => {
+  //     let hasNumber = /\d/;
+  //     if (hasNumber.test(phonenumber)) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   };
+
+  // }
 //     setregistrationPageNumber();
 //  };
 

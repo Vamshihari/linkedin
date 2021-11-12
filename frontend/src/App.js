@@ -7,6 +7,7 @@ import Landing from './components/landing.js';
 
 
 
+
 function App() {
   
   return (
@@ -18,6 +19,7 @@ function App() {
         />
         <Route exact path="/login" render={()=><Login/>}
         />
+        
       </Switch>
     </Router>
   

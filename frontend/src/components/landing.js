@@ -1,3 +1,11 @@
+/**
+ * Importing REACT 
+ * Importing CSS file front.css from assests
+ * 
+ * @author: HARI VAMSHI
+ * @author: SURYA KANT
+ *
+ */
 import React from 'react';
 import "../assests/front.css"
 

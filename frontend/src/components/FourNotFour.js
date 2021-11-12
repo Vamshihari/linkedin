@@ -1,13 +1,8 @@
-
 import React  from 'react'
+import error from '../public/error.png'
 
 export default function FourNotFour() {
 	
 
-	return (
-		<div>
-			404 not found
-
-		</div>
-	)
+	return <img src={error} alt="error.png" />
 }

@@ -26,9 +26,9 @@ npm start . and this application runs on http://localhost:1108/login
 # folder structure
  contains two folder i.e front end part and server backend part.
  
- assets contains images.
+assets contains two CSS filesfront.css and reg.css
 
- MyComponent folder contain all the JS Components which can be reusable.
+Component folder contain all the JS Components which can be reusable.
 
  
 
