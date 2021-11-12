@@ -125,15 +125,3 @@ color: #0A66C3;
 .set{ 
 	text-align: center;
 }
-
-.submit-btn {
-	text-align: center;
-	background-color: #0073b1;
-	color: #fff;
-	border: none;
-	font-weight: bolder;
-	font-size: 1rem;
-	outline: none;
-	cursor: pointer;
-	border-radius:10px;
-  }
